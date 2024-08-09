@@ -1,3 +1,5 @@
+@import '_fonts';
+
 //general
 * {
   box-sizing: border-box;
@@ -25,7 +27,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4;
   color: #e0e1dc;
   background: #224486;
@@ -43,3 +45,531 @@ body {
   }
 }
 
+.section-title {
+  font-family: 'Neutral Face Bold', sans-serif;
+  font-size: 3.375rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.mt {
+  &_3 {
+    margin-top: 30px;
+  }
+
+  &_4 {
+    margin-top: 40px;
+  }
+
+  &_5 {
+    margin-top: 50px;
+  }
+}
+
+.mb {
+  &_4 {
+    margin-bottom: 40px;
+  }
+
+  &_5 {
+    margin-bottom: 50px;
+  }
+
+  &_6 {
+    margin-bottom: 60px;
+  }
+
+  &_7 {
+    margin-bottom: 70px;
+  }
+}
+//general
+
+//top
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  max-height: 1080px;
+  width: 100%;
+  background: url("../img/top-bg.jpg") no-repeat center center;
+  background-size: cover;
+
+  &__header {
+    width: 100%;
+
+    &-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 46px 0;
+    }
+
+    &-nav {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    &-link {
+      margin-right: 37px;
+      font-size: 1.125rem;
+      font-weight: 600;
+      letter-spacing: 0.36px;
+      text-transform: uppercase;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &-logo {
+      flex-shrink: 0;
+      width: 200px;
+      margin-left: 20px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    padding: 100px 0;
+
+    &-grid {
+      width: 100%;
+      max-width: 740px;
+    }
+
+    &-subheader {
+      margin-bottom: 14px;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.48px;
+    }
+
+    &-header {
+      margin-bottom: 77px;
+      font-size: 2.875rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0.92px;
+      text-transform: uppercase;
+    }
+
+    &-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      width: 100%;
+      max-width: 370px;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0.64px;
+      text-transform: uppercase;
+      color: #224486;
+      background: #e0e1dc;
+      border-radius: 50%;
+    }
+  }
+}
+//top
+
+//auditory
+.auditory {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 150px;
+  text-align: center;
+  color: #224486;
+  background: #e0e1dc;
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    margin-bottom: 32px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.48px;
+  }
+
+  &__questions {
+    position: relative;
+    width: 100%;
+    max-width: 363px;
+    margin: 0 auto;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__bubble {
+    position: absolute;
+    width: 100%;
+
+    &_1 {
+      top: 0;
+      left: -63px;
+      max-width: 229px;
+    }
+
+    &_2 {
+      top: 27px;
+      left: 229px;
+      max-width: 181px;
+    }
+
+    &_3 {
+      top: 70px;
+      left: 392px;
+      max-width: 251px;
+    }
+
+    &_4 {
+      top: 134px;
+      left: 406px;
+      max-width: 169px;
+    }
+
+    &_5 {
+      top: 210px;
+      left: 325px;
+      max-width: 214px;
+    }
+
+    &_6 {
+      top: 266px;
+      left: 387px;
+      max-width: 277px;
+    }
+
+    &_7 {
+      top: 313px;
+      left: 254px;
+      max-width: 266px;
+    }
+
+    &_8 {
+      top: 366px;
+      left: 192px;
+      max-width: 229px;
+    }
+
+    &_9 {
+      top: 321px;
+      left: -60px;
+      max-width: 267px;
+    }
+
+    &_10 {
+      top: 252px;
+      left: -185px;
+      max-width: 251px;
+    }
+
+    &_11 {
+      top: 175px;
+      left: -229px;
+      max-width: 204px;
+    }
+
+    &_12 {
+      top: 119px;
+      left: -192px;
+      max-width: 226px;
+    }
+
+    &_13 {
+      top: 69px;
+      left: -238px;
+      max-width: 227px;
+    }
+  }
+
+  &__flower {
+    position: absolute;
+    width: 100%;
+
+    &_1 {
+      top: -5px;
+      left: -288px;
+      transform: translate(-100%, -50%);
+      max-width: 94px;
+    }
+
+    &_2 {
+      top: -55px;
+      right: -271px;
+      transform: translate(100%, -100%);
+      max-width: 77px;
+    }
+
+    &_3 {
+      bottom: -32px;
+      left: -52px;
+      transform: translate(-100%, 100%);
+      max-width: 79px;
+    }
+  }
+}
+//auditory
+
+//courses
+.courses {
+  padding-top: 120px;
+  padding-bottom: 100px;
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 100px;
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    &-subtitle {
+      margin-bottom: 7px;
+      font-size: 2.5rem;
+      font-style: italic;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    &-text {
+      font-size: 1.25rem;
+      font-weight: 300;
+      letter-spacing: 0.4px;
+    }
+
+    &-title {
+      margin-top: auto;
+    }
+
+    &-image {
+      flex-shrink: 0;
+      width: 100%;
+      max-width: 370px;
+      margin-left: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__column {
+    width: 100%;
+    max-width: 454px;
+    margin-right: 34px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__item {
+    &-title {
+      display: flex;
+      justify-content: flex-start;
+      align-self: center;
+      margin-bottom: 40px;
+
+      .icon {
+        flex-shrink: 0;
+        width: 77px;
+        margin-right: 6px;
+      }
+
+      .text {
+        height: 65px;
+      }
+    }
+
+    &-point {
+      display: flex;
+      justify-content: flex-start;
+      align-self: flex-start;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .icon {
+        flex-shrink: 0;
+        width: 38px;
+        margin-right: 6px;
+      }
+
+      .text {
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 0.48px;
+      }
+
+      .caption {
+        font-size: 1.25rem;
+        font-weight: 300;
+        letter-spacing: 0.4px;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 380px;
+    margin: 10px -120px 0 auto;
+  }
+}
+//courses
+
+//gallery
+.gallery {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  &__photo {
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+//gallery
+
+//program
+.program {
+  padding-top: 120px;
+  padding-bottom: 150px;
+  color: #224486;
+  background: #e0e1dc;
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__caption {
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+    letter-spacing: 0.48px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 48px;
+  }
+
+  &__card {
+    position: relative;
+    padding: 40px 50px;
+    color: #e0e1dc;
+
+    @media only screen and (max-width: 1200px) {
+      padding: 40px 45px;
+    }
+
+    &_1 {
+      background: #224486;
+      border-radius: 0 60px 60px 60px;
+
+      .program__card-image {
+        right: 44px;
+        bottom: 33px;
+        width: 90px;
+      }
+    }
+
+    &_2 {
+      background: #ad4419;
+      border-radius: 60px 0 60px 60px;
+
+      .program__card-image {
+        top: 32px;
+        right: 40px;
+        width: 80px;
+      }
+    }
+
+    &_3 {
+      background: #ad4419;
+      border-radius: 60px 60px 60px 0;
+
+      .program__card-image {
+        top: 62px;
+        right: 40px;
+        width: 80px;
+      }
+    }
+
+    &_4 {
+      background: #224486;
+      border-radius: 60px 60px 0 60px;
+
+      .program__card-image {
+        top: 40px;
+        right: 25px;
+        width: 80px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 10px;
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: 0.64px;
+      text-transform: uppercase;
+
+      @media only screen and (max-width: 1200px) {
+        font-size: 2rem;
+      }
+    }
+
+    &-list {
+      margin: 0;
+      padding-left: 30px;
+      font-size: 1.25rem;
+      letter-spacing: 0.36px;
+
+      @media only screen and (max-width: 1200px) {
+        font-size: 1.125rem;
+      }
+    }
+
+    &-image {
+      position: absolute;
+    }
+  }
+}
+//program
