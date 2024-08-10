@@ -18,6 +18,14 @@ a {
   text-decoration: none;
 }
 
+html {
+  font-size: 16px;
+
+  @media only screen and (max-width: 1440px) {
+    font-size: 16px;
+  }
+}
+
 body {
   overflow-x: hidden;
   width: 100%;
@@ -25,9 +33,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
-  font-size: 16px;
   line-height: 1.4;
   color: #e0e1dc;
   background: #224486;
@@ -40,8 +47,8 @@ body {
   margin-right: auto;
   padding: 0 25px;
 
-  @media only screen and (max-width: 991px) {
-    padding: 0 15px;
+  @media only screen and (max-width: 1440px) {
+    max-width: 1200px;
   }
 }
 
@@ -154,7 +161,6 @@ body {
     &-subheader {
       margin-bottom: 14px;
       font-size: 1.5rem;
-      font-weight: 400;
       letter-spacing: 0.48px;
     }
 
@@ -203,7 +209,6 @@ body {
   &__text {
     margin-bottom: 32px;
     font-size: 1.5rem;
-    font-weight: 400;
     letter-spacing: 0.48px;
   }
 
@@ -428,7 +433,6 @@ body {
 
       .text {
         font-size: 1.5rem;
-        font-weight: 400;
         letter-spacing: 0.48px;
       }
 
@@ -493,12 +497,8 @@ body {
 
   &__card {
     position: relative;
-    padding: 40px 50px;
+    padding: 40px 45px;
     color: #e0e1dc;
-
-    @media only screen and (max-width: 1200px) {
-      padding: 40px 45px;
-    }
 
     &_1 {
       background: #224486;
@@ -546,25 +546,17 @@ body {
 
     &-title {
       margin-bottom: 10px;
-      font-size: 2.25rem;
+      font-size: 2rem;
       font-weight: 700;
       letter-spacing: 0.64px;
       text-transform: uppercase;
-
-      @media only screen and (max-width: 1200px) {
-        font-size: 2rem;
-      }
     }
 
     &-list {
       margin: 0;
       padding-left: 30px;
-      font-size: 1.25rem;
+      font-size: 1.125rem;
       letter-spacing: 0.36px;
-
-      @media only screen and (max-width: 1200px) {
-        font-size: 1.125rem;
-      }
     }
 
     &-image {
@@ -573,3 +565,163 @@ body {
   }
 }
 //program
+
+//team
+.team {
+  padding-top: 120px;
+  padding-bottom: 90px;
+  font-size: 1.125rem;
+
+  &__title {
+    margin-bottom: 52px;
+  }
+
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 85px;
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 545px;
+    margin-right: 45px;
+    letter-spacing: 0.36px;
+
+    p {
+      margin-top: 0;
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    max-width: 460px;
+
+    &-container {
+      position: relative;
+      width: 100%;
+      margin-bottom: 7px;
+    }
+
+    &-main {
+      width: 100%;
+    }
+
+    &-droplets {
+      position: absolute;
+      bottom: 0;
+      right: -26px;
+      width: 108px;
+    }
+
+    &-caption {
+      font-style: italic;
+      font-weight: 600;
+      letter-spacing: 0.36px;
+      color: rgba(224, 225, 220, 0.80);
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+    grid-column-gap: 10px;
+
+    &-photo {
+      overflow: hidden;
+      border-radius: 28px;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+//team
+
+//motto
+.motto {
+  padding: 40px 0;
+  background: #ad4419;
+
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 450px;
+    margin-right: 94px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 3rem;
+    line-height: 1.4;
+  }
+
+  &__flower {
+    align-self: flex-end;
+    width: 305px;
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 495px;
+    font-size: 1.125rem;
+    letter-spacing: 0.36px;
+
+    p {
+      margin-top: 0;
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+//motto
+
+//speakers
+.speakers {
+  padding-top: 120px;
+  padding-bottom: 150px;
+
+  &__title {
+    margin-bottom: 86px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+  }
+
+  &__item {
+    &-photo {
+      width: 72px;
+      margin-bottom: 15px;
+      margin-right: 12px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+//speakers
