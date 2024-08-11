@@ -14,6 +14,14 @@ jQuery(document).ready(function() {
     });
 });
 
+jQuery(document).ready(function() {
+    $('.program').parallaxify({
+        positionProperty: 'transform',
+        mouseMotionType: 'gaussian',
+        useMouseMove: true
+    });
+});
+
 ;(function($, window, document, undefined) {
 
     var pluginName = 'parallaxify',

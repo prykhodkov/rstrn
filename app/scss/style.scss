@@ -1445,6 +1445,16 @@ body {
   &__flower {
     align-self: flex-end;
     width: 305px;
+    animation: waving 1500ms infinite linear alternate;
+  }
+
+  @keyframes waving {
+    0% {
+      transform: rotate(-10deg) translateX(0);
+    }
+    100% {
+      transform: rotate(0)translateX(20px);
+    }
   }
 
   &__info {
@@ -1521,6 +1531,11 @@ body {
 
         &:last-child {
           margin-right: 0;
+        }
+
+        @media only screen and (max-width: 767px) {
+          width: 68px;
+          margin-right: 8px;
         }
       }
 
