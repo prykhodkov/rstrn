@@ -97,6 +97,20 @@ body {
   }
 }
 
+.desktop-only {
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+
+  @media only screen and (max-width: 767px) {
+    display: block;
+  }
+}
+
 .text-italic {
   font-style: italic;
 }
@@ -1037,6 +1051,10 @@ body {
       padding: 40px 20px;
     }
 
+    @media only screen and (max-width: 767px) {
+      padding: 40px 20px 90px;
+    }
+
     &_1 {
       background: #224486;
       border-radius: 0 60px 60px 60px;
@@ -1052,6 +1070,14 @@ body {
 
         @media only screen and (max-width: 991px) {
           width: 60px;
+        }
+
+        @media only screen and (max-width: 767px) {
+          left: 50%;
+          transform: translateX(-50%);
+          right: unset;
+          bottom: 23px;
+          width: 70px;
         }
       }
     }
@@ -1071,6 +1097,13 @@ body {
 
         @media only screen and (max-width: 991px) {
           width: 53px;
+        }
+
+        @media only screen and (max-width: 767px) {
+          top: unset;
+          bottom: 15px;
+          right: 40px;
+          width: 63px;
         }
       }
     }
@@ -1092,6 +1125,13 @@ body {
         @media only screen and (max-width: 991px) {
           width: 53px;
         }
+
+        @media only screen and (max-width: 767px) {
+          top: unset;
+          bottom: 15px;
+          right: 40px;
+          width: 63px;
+        }
       }
     }
 
@@ -1112,6 +1152,13 @@ body {
         @media only screen and (max-width: 991px) {
           width: 53px;
         }
+
+        @media only screen and (max-width: 767px) {
+          top: unset;
+          bottom: 22px;
+          right: 80px;
+          width: 63px;
+        }
       }
     }
 
@@ -1128,6 +1175,10 @@ body {
       padding-left: 30px;
       font-size: 1.125rem;
       letter-spacing: 0.36px;
+
+      @media only screen and (max-width: 767px) {
+        padding-left: 23px;
+      }
     }
 
     &-image {
@@ -1144,8 +1195,17 @@ body {
   font-size: 1.125rem;
   background: #224486;
 
+  @media only screen and (max-width: 767px) {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
   &__title {
     margin-bottom: 52px;
+
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 72px;
+    }
   }
 
   &__grid {
@@ -1157,7 +1217,8 @@ body {
     @media only screen and (max-width: 767px) {
       flex-direction: column-reverse;
       justify-content: flex-start;
-      align-items: flex-start;
+      align-items: center;
+      margin-bottom: 20px;
     }
   }
 
@@ -1179,17 +1240,31 @@ body {
     }
 
     @media only screen and (max-width: 767px) {
+      max-width: 100%;
       margin-top: 92px;
       margin-right: 0;
+      font-size: 1.5rem;
     }
 
     p {
       margin-top: 0;
       margin-bottom: 24px;
 
+      @media only screen and (max-width: 767px) {
+        margin-bottom: 60px;
+      }
+
       &:last-child {
         margin-bottom: 0;
       }
+    }
+
+    &-subtitle {
+      margin-bottom: 25px;
+      font-size: 2.5rem;
+      font-style: italic;
+      font-weight: 700;
+      letter-spacing: 0.8px;
     }
   }
 
@@ -1204,10 +1279,18 @@ body {
       transform: translateY(0);
     }
 
+    @media only screen and (max-width: 767px) {
+      max-width: 100%;
+    }
+
     &-container {
       position: relative;
       width: 100%;
       margin-bottom: 7px;
+
+      @media only screen and (max-width: 767px) {
+        margin-bottom: 14px;
+      }
     }
 
     &-main {
@@ -1244,11 +1327,19 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 80px;
     }
 
     &-photo {
       overflow: hidden;
       border-radius: 28px;
+      opacity: 0;
+
+      &.in-view {
+        opacity: 1;
+      }
 
       @media only screen and (max-width: 767px) {
         position: absolute;
@@ -1268,22 +1359,22 @@ body {
 
       &_2 {
         @media only screen and (max-width: 767px) {
-          transform: rotate(20deg);
+          transform: rotate(15deg) translate(40px, -20px);
           z-index: 3;
         }
       }
 
       &_3 {
         @media only screen and (max-width: 767px) {
-          transform: rotate(-5deg);
-          z-index: 2;
+          transform: rotate(-5deg) translate(40px, -20px);
+          z-index: 1;
         }
       }
 
       &_4 {
         @media only screen and (max-width: 767px) {
-          transform: rotate(50deg);
-          z-index: 1;
+          transform: rotate(-3deg) translate(49px, 0px);
+          z-index: 2;
         }
       }
 
@@ -1300,6 +1391,10 @@ body {
 .motto {
   padding: 40px 0;
   background: #ad4419;
+
+  @media only screen and (max-width: 767px) {
+    padding: 70px 0;
+  }
 
   &__grid {
     display: flex;
@@ -1325,6 +1420,11 @@ body {
     @media only screen and (max-width: 991px) {
       margin-right: 20px;
     }
+
+    @media only screen and (max-width: 767px) {
+      max-width: 100%;
+      margin-right: 0;
+    }
   }
 
   &__title {
@@ -1344,10 +1444,6 @@ body {
   &__flower {
     align-self: flex-end;
     width: 305px;
-
-    @media only screen and (max-width: 767px) {
-      display: none;
-    }
   }
 
   &__info {
@@ -1355,6 +1451,12 @@ body {
     max-width: 495px;
     font-size: 1.125rem;
     letter-spacing: 0.36px;
+
+    @media only screen and (max-width: 767px) {
+      max-width: 100%;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
 
     p {
       margin-top: 0;
@@ -1374,8 +1476,17 @@ body {
   padding-bottom: 150px;
   background: #224486;
 
+  @media only screen and (max-width: 767px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
   &__title {
     margin-bottom: 86px;
+
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 80px;
+    }
   }
 
   &__grid {
@@ -1486,6 +1597,11 @@ body {
   color: #224486;
   background: #e0e1dc;
 
+  @media only screen and (max-width: 767px) {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
   &__title {
     margin-bottom: 105px;
 
@@ -1508,6 +1624,7 @@ body {
     @media only screen and (max-width: 767px) {
       grid-template-columns: 1fr;
       grid-row-gap: 60px;
+      margin-bottom: 40px;
     }
   }
 
@@ -1522,14 +1639,30 @@ body {
       transform: translateY(0);
     }
 
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+
     &_1 {
       background: url("../img/registration_1.svg") no-repeat top center;
       background-size: 100% 100%;
+
+      @media only screen and (max-width: 767px) {
+        background: url("../img/registration_1_mobile.svg") no-repeat top center;
+        background-size: 100% 100%;
+      }
     }
 
     &_2 {
       background: url("../img/registration_2.svg") no-repeat top center;
       background-size: 100% 100%;
+
+      @media only screen and (max-width: 767px) {
+        background: url("../img/registration_2_mobile.svg") no-repeat top center;
+        background-size: 100% 100%;
+      }
 
       .registration__card-plus {
         opacity: 0;
@@ -1547,7 +1680,7 @@ body {
       text-align: right;
 
       @media only screen and (max-width: 767px) {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
         padding-right: 0;
       }
     }
@@ -1565,6 +1698,10 @@ body {
       font-style: italic;
       letter-spacing: 0.48px;
       text-transform: uppercase;
+
+      @media only screen and (max-width: 767px) {
+        font-size: 2rem;
+      }
     }
 
     &-footer {
@@ -1629,12 +1766,16 @@ body {
       &__title {
         display: flex;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
 
         .icon {
           flex-shrink: 0;
           width: 24px;
           margin-right: 4px;
+
+          @media only screen and (max-width: 767px) {
+            margin-top: 10px;
+          }
         }
 
         .title {
@@ -1642,6 +1783,11 @@ body {
           font-size: 1.25rem;
           font-weight: 700;
           letter-spacing: 0.4px;
+
+          @media only screen and (max-width: 767px) {
+            font-size: 1.5rem;
+            letter-spacing: 0.48px;
+          }
         }
       }
 
@@ -1663,6 +1809,7 @@ body {
 
         @media only screen and (max-width: 767px) {
           padding-left: 20px;
+          font-size: 1.125rem;
         }
 
         li {
@@ -1861,8 +2008,8 @@ body {
   background-size: 1440px auto;
 
   @media only screen and (max-width: 767px) {
-    background: url("../img/footer-bg.jpg") repeat top center;
-    background-size: cover;
+    background: url("../img/footer-bg_mobile.jpg") repeat-x center center;
+    background-size: auto 100%;
   }
 
   &__content {
@@ -1875,6 +2022,7 @@ body {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
+      margin-bottom: 70px;
     }
   }
 
@@ -1964,10 +2112,6 @@ body {
   }
 
   &__contacts {
-    @media only screen and (max-width: 767px) {
-      margin-bottom: 70px;
-    }
-
     &-title {
       margin-bottom: 8px;
       font-size: 2rem;
