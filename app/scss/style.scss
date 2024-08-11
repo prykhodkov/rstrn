@@ -37,7 +37,6 @@ body {
   font-style: normal;
   line-height: 1.4;
   color: #e0e1dc;
-  background: #224486;
 }
 
 .container {
@@ -292,6 +291,21 @@ body {
     width: 100%;
     max-width: 363px;
     margin: 0 auto;
+
+    &:not(.in-view) {
+      .auditory__bubble {
+        transition-delay: 0ms;
+      }
+    }
+
+    &.in-view {
+      .auditory__bubble {
+        opacity: 1;
+        transform: translateY(0);
+        transition-duration: 180ms;
+        animation-timing-function: ease;
+      }
+    }
   }
 
   &__image {
@@ -303,11 +317,6 @@ body {
     width: 100%;
     opacity: 0;
     transform: translateY(-40px);
-
-    &.in-view {
-      opacity: 1;
-      transform: translateY(0);
-    }
 
     &_1 {
       top: 0;
@@ -393,23 +402,20 @@ body {
     width: 100%;
 
     &_1 {
-      top: -5px;
-      left: -288px;
-      transform: translate(-100%, -50%);
+      top: -25px;
+      left: -300px;
       max-width: 94px;
     }
 
     &_2 {
-      top: -55px;
-      right: -271px;
-      transform: translate(100%, -100%);
+      top: -75px;
+      right: -290px;
       max-width: 77px;
     }
 
     &_3 {
-      bottom: -32px;
-      left: -52px;
-      transform: translate(-100%, 100%);
+      bottom: -60px;
+      left: -70px;
       max-width: 79px;
     }
   }
@@ -420,6 +426,7 @@ body {
 .courses {
   padding-top: 120px;
   padding-bottom: 100px;
+  background: #224486;
 
   &__main {
     display: flex;
@@ -444,7 +451,7 @@ body {
       letter-spacing: 0.8px;
       text-transform: uppercase;
       opacity: 0;
-      transform: translateY(-30px);
+      transform: translateY(-50px);
 
       &.in-view {
         opacity: 1;
@@ -457,7 +464,7 @@ body {
       font-weight: 300;
       letter-spacing: 0.4px;
       opacity: 0;
-      transform: translateY(-30px);
+      transform: translateY(-50px);
 
       &.in-view {
         opacity: 1;
@@ -467,7 +474,7 @@ body {
 
     &-title {
       margin-top: auto;opacity: 0;
-      transform: translateY(-30px);
+      transform: translateY(-50px);
 
       &.in-view {
         opacity: 1;
@@ -481,7 +488,7 @@ body {
       max-width: 370px;
       margin-left: 20px;
       opacity: 0;
-      transform: translateY(-30px);
+      transform: translateY(-50px);
 
       &.in-view {
         opacity: 1;
@@ -507,6 +514,14 @@ body {
   }
 
   &__item {
+    opacity: 0;
+    transform: translateY(-50px);
+
+    &.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     &-title {
       display: flex;
       justify-content: flex-start;
@@ -568,8 +583,6 @@ body {
     grid-template-columns: repeat(4, 1fr);
     align-items: stretch;
     width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
   }
 
   &__photo {
@@ -608,6 +621,13 @@ body {
     position: relative;
     padding: 40px 45px;
     color: #e0e1dc;
+    opacity: 0;
+    transform: translateY(-50px);
+
+    &.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     &_1 {
       background: #224486;
@@ -680,6 +700,7 @@ body {
   padding-top: 120px;
   padding-bottom: 90px;
   font-size: 1.125rem;
+  background: #224486;
 
   &__title {
     margin-bottom: 52px;
@@ -697,6 +718,13 @@ body {
     max-width: 545px;
     margin-right: 45px;
     letter-spacing: 0.36px;
+    opacity: 0;
+    transform: translateY(-50px);
+
+    &.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     p {
       margin-top: 0;
@@ -711,6 +739,13 @@ body {
   &__photo {
     width: 100%;
     max-width: 460px;
+    opacity: 0;
+    transform: translateY(-50px);
+
+    &.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     &-container {
       position: relative;
@@ -810,6 +845,7 @@ body {
 .speakers {
   padding-top: 120px;
   padding-bottom: 150px;
+  background: #224486;
 
   &__title {
     margin-bottom: 86px;
@@ -914,6 +950,13 @@ body {
   &__card {
     padding: 20px 20px 80px;
     color: #e0e1dc;
+    opacity: 0;
+    transform: translateY(-50px);
+
+    &.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     &_1 {
       background: url("../img/registration_1.svg") no-repeat top center;
@@ -1190,8 +1233,6 @@ body {
 .bottom {
   &__photo {
     width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
   }
 }
 //bottom
