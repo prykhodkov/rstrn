@@ -37,3 +37,17 @@ $(document).ready(function() {
     }, 900, 'swing', function () {});
   });
 });
+
+$('#mobileNavOpen').on('click', () => {
+  $('#mobileNav').addClass('show');
+  setTimeout(() => {
+    $('#mobileNav').addClass('animate');
+  }, 50);
+});
+
+$('#mobileNavClose').on('click', () => {
+  $('#mobileNav').removeClass('animate');
+  setTimeout(() => {
+    $('#mobileNav').removeClass('show');
+  }, 230);
+});
