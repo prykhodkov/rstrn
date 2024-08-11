@@ -803,6 +803,8 @@ body {
       }
 
       &_mobile {
+        display: none;
+
         @media only screen and (max-width: 767px) {
           display: block;
           margin-bottom: 50px;
