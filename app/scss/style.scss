@@ -970,20 +970,19 @@ body {
 
 //gallery
 .gallery {
-  overflow: hidden;
+  width: 100%;
 
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: stretch;
-    width: 100%;
+  .swiper-wrapper {
+    transition-timing-function: linear;
+  }
 
-    @media only screen and (max-width: 767px) {
-      grid-template-columns: repeat(4, 100vw);
-    }
+  .swiper-slide {
+    height: auto;
   }
 
   &__photo {
+    height: 100%;
+
     img {
       height: 100%;
       width: 100%;

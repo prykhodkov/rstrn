@@ -51,3 +51,45 @@ $('#mobileNavClose').on('click', () => {
     $('#mobileNav').removeClass('show');
   }, 230);
 });
+
+var swiperGallery1 = new Swiper('.gallery__carousel_1', {
+  loop: true,
+  allowTouchMove: false,
+  centeredSlides: false,
+  preventInteractionOnTransition: true,
+  slidesPerView: 1,
+  freeMode: true,
+  autoplay: {
+    enabled: true,
+    delay: 0,
+    pauseOnMouseEnter: false,
+    disableOnInteraction: false,
+  },
+  speed: 7000,
+  breakpoints: {
+    768: {
+      slidesPerView: 4,
+    },
+  }
+});
+
+var swiperGallery2 = new Swiper('.gallery__carousel_2', {
+  loop: true,
+  allowTouchMove: false,
+  centeredSlides: false,
+  preventInteractionOnTransition: true,
+  slidesPerView: 1,
+  freeMode: true,
+  autoplay: {
+    enabled: true,
+    delay: 0,
+    pauseOnMouseEnter: false,
+    disableOnInteraction: false,
+  },
+  speed: 7000,
+  breakpoints: {
+    768: {
+      slidesPerView: 4,
+    },
+  }
+});
