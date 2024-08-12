@@ -24,10 +24,6 @@ html {
   @media only screen and (max-width: 1200px) {
     font-size: 14px;
   }
-
-  @media only screen and (max-width: 767px) {
-    font-size: 16px;
-  }
 }
 
 body {
@@ -213,6 +209,24 @@ body {
 
   &_13 {
     transition-delay: 1680ms;
+  }
+}
+
+@keyframes waving {
+  0% {
+    transform: rotate(-10deg) translateX(0);
+  }
+  100% {
+    transform: rotate(0) translateX(20px);
+  }
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
   }
 }
 //general
@@ -750,18 +764,19 @@ body {
     }
 
     &-subtitle {
+      position: relative;
       margin-bottom: 7px;
       font-size: 2.5rem;
       font-style: italic;
       font-weight: 700;
       letter-spacing: 0.8px;
       text-transform: uppercase;
-      opacity: 0;
-      transform: translateY(50px);
 
-      &.in-view {
-        opacity: 1;
-        transform: translateY(0);
+      .icon {
+        position: absolute;
+        top: -50px;
+        right: -99px;
+        width: 108px;
       }
 
       @media only screen and (max-width: 767px) {
@@ -774,29 +789,19 @@ body {
       font-size: 1.25rem;
       font-weight: 300;
       letter-spacing: 0.4px;
-      opacity: 0;
-      transform: translateY(50px);
-
-      &.in-view {
-        opacity: 1;
-        transform: translateY(0);
-      }
 
       @media only screen and (max-width: 767px) {
         font-size: 1.5rem;
         font-weight: 400;
+
+        br {
+          display: none;
+        }
       }
     }
 
     &-title {
       margin-top: auto;
-      opacity: 0;
-      transform: translateY(50px);
-
-      &.in-view {
-        opacity: 1;
-        transform: translateY(0);
-      }
 
       @media only screen and (max-width: 767px) {
         display: none;
@@ -817,13 +822,6 @@ body {
       width: 100%;
       max-width: 370px;
       margin-left: 20px;
-      opacity: 0;
-      transform: translateY(50px);
-
-      &.in-view {
-        opacity: 1;
-        transform: translateY(0);
-      }
 
       @media only screen and (max-width: 991px) {
         max-width: 345px;
@@ -864,14 +862,6 @@ body {
   }
 
   &__item {
-    opacity: 0;
-    transform: translateY(50px);
-
-    &.in-view {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
     &.mt_3 {
       @media only screen and (max-width: 767px) {
         margin-top: 40px;
@@ -956,6 +946,7 @@ body {
     width: 100%;
     max-width: 380px;
     margin: 10px -120px 0 auto;
+    animation: waving 1500ms infinite linear alternate;
 
     @media only screen and (max-width: 991px) {
       margin: 10px 0 0 auto;
@@ -1040,13 +1031,6 @@ body {
     position: relative;
     padding: 40px 45px;
     color: #e0e1dc;
-    opacity: 0;
-    transform: translateY(-50px);
-
-    &.in-view {
-      opacity: 1;
-      transform: translateY(0);
-    }
 
     @media only screen and (max-width: 991px) {
       padding: 40px 20px;
@@ -1197,6 +1181,7 @@ body {
   background: #224486;
 
   @media only screen and (max-width: 767px) {
+    overflow: hidden;
     padding-top: 80px;
     padding-bottom: 100px;
   }
@@ -1228,13 +1213,6 @@ body {
     max-width: 545px;
     margin-right: 45px;
     letter-spacing: 0.36px;
-    opacity: 0;
-    transform: translateY(-50px);
-
-    &.in-view {
-      opacity: 1;
-      transform: translateY(0);
-    }
 
     @media only screen and (max-width: 991px) {
       margin-right: 20px;
@@ -1272,13 +1250,6 @@ body {
   &__photo {
     width: 100%;
     max-width: 460px;
-    opacity: 0;
-    transform: translateY(-50px);
-
-    &.in-view {
-      opacity: 1;
-      transform: translateY(0);
-    }
 
     @media only screen and (max-width: 767px) {
       max-width: 100%;
@@ -1354,28 +1325,28 @@ body {
         @media only screen and (max-width: 767px) {
           position: relative !important;
           transform: rotate(-20deg);
-          z-index: 4;
+          z-index: 1;
         }
       }
 
       &_2 {
         @media only screen and (max-width: 767px) {
-          transform: rotate(15deg) translate(40px, -20px);
-          z-index: 3;
+          transform: rotate(-16deg) translate(55px, -20px);
+          z-index: 2;
         }
       }
 
       &_3 {
         @media only screen and (max-width: 767px) {
-          transform: rotate(-5deg) translate(40px, -20px);
-          z-index: 1;
+          transform: rotate(12deg) translate(20px, -20px);
+          z-index: 3;
         }
       }
 
       &_4 {
         @media only screen and (max-width: 767px) {
-          transform: rotate(-3deg) translate(49px, 0px);
-          z-index: 2;
+          transform: rotate(0deg) translate(49px, 0px);
+          z-index: 4;
         }
       }
 
@@ -1429,6 +1400,7 @@ body {
   }
 
   &__title {
+    position: relative;
     margin-bottom: 15px;
     font-size: 3rem;
     line-height: 1.4;
@@ -1439,6 +1411,15 @@ body {
 
     @media only screen and (max-width: 767px) {
       margin-bottom: 40px;
+      font-family: 'Open Sans', sans-serif;
+      text-transform: capitalize;
+    }
+
+    .icon {
+      position: absolute;
+      top: -30px;
+      right: 20px;
+      width: 74px;
     }
   }
 
@@ -1446,15 +1427,6 @@ body {
     align-self: flex-end;
     width: 305px;
     animation: waving 1500ms infinite linear alternate;
-  }
-
-  @keyframes waving {
-    0% {
-      transform: rotate(-10deg) translateX(0);
-    }
-    100% {
-      transform: rotate(0)translateX(20px);
-    }
   }
 
   &__info {
@@ -1596,6 +1568,7 @@ body {
     bottom: -110px;
     right: -120px;
     width: 365px;
+    animation: rotating 1500ms infinite linear alternate;
 
     @media only screen and (max-width: 767px) {
       display: none;
@@ -1647,13 +1620,6 @@ body {
   &__card {
     padding: 20px 20px 80px;
     color: #e0e1dc;
-    opacity: 0;
-    transform: translateY(-50px);
-
-    &.in-view {
-      opacity: 1;
-      transform: translateY(0);
-    }
 
     @media only screen and (max-width: 767px) {
       width: 100%;
@@ -2024,6 +1990,8 @@ body {
   background-size: 1440px auto;
 
   @media only screen and (max-width: 767px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
     background: url("../img/footer-bg_mobile.jpg") repeat-x center center;
     background-size: auto 100%;
   }
