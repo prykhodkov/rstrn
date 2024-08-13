@@ -22,6 +22,14 @@ jQuery(document).ready(function() {
     });
 });
 
+jQuery(document).ready(function() {
+    $('.registration').parallaxify({
+        positionProperty: 'transform',
+        mouseMotionType: 'gaussian',
+        useMouseMove: true
+    });
+});
+
 ;(function($, window, document, undefined) {
 
     var pluginName = 'parallaxify',

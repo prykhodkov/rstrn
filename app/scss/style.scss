@@ -1580,6 +1580,7 @@ body {
 //registration
 .registration {
   position: relative;
+  overflow: hidden;
   padding-top: 120px;
   padding-bottom: 100px;
   text-align: center;
@@ -1601,6 +1602,7 @@ body {
   }
 
   &__grid {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 36px;
@@ -1907,51 +1909,48 @@ body {
     }
 
     &_1 {
-      top: 175px;
-      left: 50%;
-      transform: translateX(-550px);
+      top: -110px;
+      left: 34px;
       width: 94px;
     }
 
     &_2 {
-      top: 90px;
-      right: 50%;
-      transform: translateX(660px);
+      top: -207px;
+      right: -82px;
       width: 77px;
     }
 
     &_3 {
-      top: 258px;
-      right: 50%;
-      transform: translateX(115px);
+      top: -39px;
+      right: 462px;
       width: 79px;
+
+      @media only screen and (max-width: 1200px) {
+        right: 300px;
+      }
     }
 
     &_4 {
-      top: 693px;
-      left: 50%;
-      transform: translateX(-675px);
+      top: 397px;
+      left: -101px;
       width: 79px;
     }
 
     &_5 {
-      top: 518px;
-      right: 50%;
-      transform: translateX(710px);
+      top: 230px;
+      right: -138px;
       width: 94px;
     }
 
     &_6 {
-      top: 1226px;
-      left: 50%;
-      transform: translateX(-658px);
+      top: 934px;
+      left: -86px;
       width: 77px;
     }
 
     &_7 {
-      top: 953px;
-      right: 50%;
-      transform: translateX(695px);
+      top: 667px;
+      right: -126px;
       width: 79px;
     }
   }
