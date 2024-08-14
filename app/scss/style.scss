@@ -436,7 +436,7 @@ body {
   background: #e0e1dc;
 
   @media only screen and (max-width: 767px) {
-    padding-bottom: 230px;
+    padding-bottom: 195px;
     text-align: left;
   }
 
@@ -750,6 +750,7 @@ body {
       justify-content: flex-start;
       align-items: flex-start;
       margin: 0 -15px 80px;
+      padding-top: 35px;
       color: #224486;
       background: #e0e1dc;
     }
@@ -1644,7 +1645,7 @@ body {
       background-size: 100% 100%;
 
       @media only screen and (max-width: 767px) {
-        background: url("../img/registration_1_mobile.svg") no-repeat top center;
+        background: url("../img/registration_1_mobile.png") no-repeat top center;
         background-size: 100% 100%;
       }
     }
@@ -1654,7 +1655,7 @@ body {
       background-size: 100% 100%;
 
       @media only screen and (max-width: 767px) {
-        background: url("../img/registration_2_mobile.svg") no-repeat top center;
+        background: url("../img/registration_2_mobile.png") no-repeat top center;
         background-size: 100% 100%;
       }
 
