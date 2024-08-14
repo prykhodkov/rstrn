@@ -37,6 +37,10 @@ body {
   font-style: normal;
   line-height: 1.4;
   color: #e0e1dc;
+
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 .container {
@@ -266,7 +270,7 @@ body {
     &-burger {
       display: none;
       flex-shrink: 0;
-      width: 96px;
+      width: 82px;
       margin-right: 20px;
 
       @media only screen and (max-width: 767px) {
@@ -350,7 +354,7 @@ body {
 
     &__burger {
       flex-shrink: 0;
-      width: 96px;
+      width: 82px;
       margin-right: 20px;
     }
 
@@ -424,6 +428,7 @@ body {
 //auditory
 .auditory {
   position: relative;
+  overflow: hidden;
   padding-top: 80px;
   padding-bottom: 150px;
   text-align: center;
@@ -724,6 +729,7 @@ body {
 
 //courses
 .courses {
+  overflow: hidden;
   padding-top: 120px;
   padding-bottom: 100px;
   background: #224486;
@@ -1175,13 +1181,13 @@ body {
 
 //team
 .team {
+  overflow: hidden;
   padding-top: 120px;
   padding-bottom: 90px;
   font-size: 1.125rem;
   background: #224486;
 
   @media only screen and (max-width: 767px) {
-    overflow: hidden;
     padding-top: 80px;
     padding-bottom: 100px;
   }
@@ -1361,6 +1367,7 @@ body {
 
 //motto
 .motto {
+  overflow: hidden;
   padding: 40px 0;
   background: #ad4419;
 
@@ -1455,6 +1462,7 @@ body {
 
 //speakers
 .speakers {
+  overflow: hidden;
   padding-top: 120px;
   padding-bottom: 150px;
   background: #224486;
@@ -1486,6 +1494,8 @@ body {
     @media only screen and (max-width: 767px) {
       overflow-x: auto;
       grid-template-columns: repeat(6, 155px);
+      margin: 0 -15px;
+      padding: 0 15px;
     }
   }
 

@@ -42,6 +42,7 @@ $(document).ready(function() {
 
 $('#mobileNavOpen').on('click', () => {
   $('#mobileNav').addClass('show');
+  $('body').addClass('lock');
   setTimeout(() => {
     $('#mobileNav').addClass('animate');
   }, 50);
@@ -51,6 +52,7 @@ $('#mobileNavClose').on('click', () => {
   $('#mobileNav').removeClass('animate');
   setTimeout(() => {
     $('#mobileNav').removeClass('show');
+    $('body').removeClass('lock');
   }, 230);
 });
 
