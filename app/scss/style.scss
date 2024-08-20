@@ -88,6 +88,7 @@ body {
   background: #e0e1dc;
   border: 2px solid transparent;
   border-radius: 50%;
+  cursor: pointer;
   transition: 180ms ease;
 
   &:hover {
@@ -250,6 +251,21 @@ body {
 
   &__header {
     width: 100%;
+    transition: 180ms ease;
+
+    &.scrolled {
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translateY(-100px);
+      z-index: -1;
+    }
+
+    &.fixed {
+      background: #ad4419;
+      transform: translateY(0);
+      z-index: 100;
+    }
 
     &-grid {
       display: flex;
@@ -263,7 +279,7 @@ body {
       }
 
       @media only screen and (max-width: 767px) {
-        padding: 65px 0;
+        padding: 45px 0;
       }
     }
 
@@ -318,7 +334,7 @@ body {
 
   .mobile-nav {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -326,6 +342,7 @@ body {
     background: #224486;
     transform: translateX(-100%);
     transition: 180ms ease;
+    z-index: 200;
 
     &.show {
       display: block;
@@ -349,7 +366,7 @@ body {
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      padding: 65px 0;
+      padding: 45px 0;
     }
 
     &__burger {
@@ -391,6 +408,7 @@ body {
 
   &__content {
     width: 100%;
+    margin-top: auto;
     padding: 100px 0;
 
     @media only screen and (max-width: 991px) {
@@ -503,6 +521,7 @@ body {
       @media only screen and (max-width: 767px) {
         top: -156px;
         left: 0;
+        transition-delay: 240ms;
       }
     }
 
@@ -518,6 +537,7 @@ body {
       @media only screen and (max-width: 767px) {
         top: -113px;
         left: 142px;
+        transition-delay: 360ms;
       }
     }
 
@@ -533,6 +553,7 @@ body {
       @media only screen and (max-width: 767px) {
         top: -67px;
         left: 118px;
+        transition-delay: 480ms;
       }
     }
 
@@ -549,6 +570,7 @@ body {
         top: 0;
         left: unset;
         right: 16px;
+        transition-delay: 720ms;
         z-index: 3;
       }
     }
@@ -565,6 +587,7 @@ body {
       @media only screen and (max-width: 767px) {
         top: 190px;
         left: 8px;
+        transition-delay: 1080ms;
         z-index: 3;
       }
     }
@@ -582,6 +605,7 @@ body {
         top: 159px;
         left: unset;
         right: 0;
+        transition-delay: 960ms;
       }
     }
 
@@ -598,6 +622,7 @@ body {
         top: unset;
         bottom: -52px;
         left: 5px;
+        transition-delay: 1560ms;
       }
     }
 
@@ -613,6 +638,7 @@ body {
       @media only screen and (max-width: 767px) {
         top: 271px;
         left: 0;
+        transition-delay: 1320ms;
       }
     }
 
@@ -629,6 +655,7 @@ body {
         top: 231px;
         left: unset;
         right: 1px;
+        transition-delay: 1200ms;
       }
     }
 
@@ -644,6 +671,7 @@ body {
       @media only screen and (max-width: 767px) {
         top: 34px;
         left: 42px;
+        transition-delay: 840ms;
         z-index: 4;
       }
     }
@@ -662,6 +690,7 @@ body {
         bottom: -96px;
         left: unset;
         right: 23px;
+        transition-delay: 1680ms;
       }
     }
 
@@ -678,6 +707,7 @@ body {
         top: 317px;
         left: unset;
         right: 0;
+        transition-delay: 1440ms;
       }
     }
 
@@ -693,6 +723,7 @@ body {
       @media only screen and (max-width: 767px) {
         top: -27px;
         left: 16px;
+        transition-delay: 600ms;
       }
     }
   }
@@ -1641,7 +1672,7 @@ body {
     }
 
     &_1 {
-      background: url("../img/registration_1.svg") no-repeat top center;
+      background: url("../img/registration_1.png") no-repeat top center;
       background-size: 100% 100%;
 
       @media only screen and (max-width: 767px) {
@@ -1651,7 +1682,7 @@ body {
     }
 
     &_2 {
-      background: url("../img/registration_2.svg") no-repeat top center;
+      background: url("../img/registration_2.png") no-repeat top center;
       background-size: 100% 100%;
 
       @media only screen and (max-width: 767px) {

@@ -565,7 +565,8 @@
                             <p>2 ZOOM коли та груповий розбір вашого ресторанного кейсу</p>
                             <p>2 години приватної консультації <br>з Оксаною Романюк</p>
                         </div>
-                        <a href="#" target="_blank" class="registration__card-button button">реєстрація</a>
+
+                        <a href="https://secure.wayforpay.com/button/b9c335f19d220" target="_blank" class="registration__card-button button">реєстрація</a>
                     </div>
                 </div>
 
@@ -672,7 +673,8 @@
                             <p>2 ZOOM коли та груповий розбір вашого ресторанного кейсу</p>
                             <p>2 години приватної консультації <br>з Оксаною Романюк</p>
                         </div>
-                        <a href="#" target="_blank" class="registration__card-button button">реєстрація</a>
+
+                        <button type="button" onclick="runWfpWdgt('https://secure.wayforpay.com/button/b9c335f19d220');" class="registration__card-button button">реєстрація</button>
                     </div>
                 </div>
 
@@ -773,6 +775,8 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="dist/js/parallaxify.js"></script>
+<script type="text/javascript" id="widget-wfp-script" src="https://secure.wayforpay.com/server/pay-widget.js?ref=button"></script>
+<script type="text/javascript">function runWfpWdgt(url){var wayforpay=new Wayforpay();wayforpay.invoice(url);}</script>
 <script src="dist/js/main.js"></script>
 </body>
 </html>

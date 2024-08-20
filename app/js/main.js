@@ -56,6 +56,22 @@ $('#mobileNavClose').on('click', () => {
   }, 230);
 });
 
+let header = $('.top__header')[0];
+let topSectionHeight = $('#top').height();
+$(window).on('scroll', () => {
+  if (window.scrollY > topSectionHeight) {
+    $(header).addClass('fixed');
+  } else {
+    $(header).removeClass('fixed');
+  }
+
+  if (window.scrollY > $(header).height()) {
+    $(header).addClass('scrolled');
+  } else {
+    $(header).removeClass('scrolled');
+  }
+});
+
 var swiperGallery1 = new Swiper('.gallery__carousel_1', {
   loop: true,
   allowTouchMove: false,
