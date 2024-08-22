@@ -72,6 +72,12 @@ $(window).on('scroll', () => {
   }
 });
 
+$('.collapse__body').hide();
+$('.collapse__head').on('click', function() {
+  $(this).parent().toggleClass('active');
+  $(this).next('.collapse__body').slideToggle();
+});
+
 var swiperGallery1 = new Swiper('.gallery__carousel_1', {
   loop: true,
   allowTouchMove: false,
