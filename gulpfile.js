@@ -18,11 +18,11 @@ gulp.task('fonts', function() {
 })
 
 gulp.task('sass', function() {
-    return gulp.src('app/scss/style.scss')
-        .pipe(sass({
-            outputStyle: 'compressed',
-        }))
-        .pipe(gulp.dest('dist/css'));
+    return gulp.src('app/scss/*.scss')
+      .pipe(sass({
+          outputStyle: 'compressed',
+      }))
+      .pipe(gulp.dest('dist/css'));
 })
 
 gulp.task('js', function () {
