@@ -718,28 +718,39 @@
                     <h3 class="footer__title section-title">Лишилися питання?</h3>
                     <div class="footer__caption">Заповніть форму зворотнього звʼязку</div>
 
-                    <form class="footer__form form">
-                        <div class="form__row form__row_double">
-                            <div class="form__group">
-                                <label for="footerFormName" class="form__label">Імʼя</label>
-                                <input type="text" id="footerFormName" name="footerFormName" class="form__input" placeholder="Ваше імʼя">
+                    <div class="footer__form form">
+                        <div id="footerFormContent" class="form__content">
+                            <div class="form__row form__row_double">
+                                <div class="form__group">
+                                    <label for="footerFormName" class="form__label">Імʼя</label>
+                                    <input type="text" id="footerFormName" name="footerFormName" class="form__input" placeholder="Ваше імʼя">
+                                </div>
+
+                                <div class="form__group">
+                                    <label for="footerFormEmail" class="form__label">Email</label>
+                                    <input type="text" id="footerFormEmail" name="footerFormEmail" class="form__input" placeholder="Вашa email aдреса">
+                                </div>
                             </div>
 
-                            <div class="form__group">
-                                <label for="footerFormEmail" class="form__label">Email</label>
-                                <input type="text" id="footerFormEmail" name="footerFormEmail" class="form__input" placeholder="Вашa email aдреса">
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <label for="footerFormQuestion" class="form__label">Питання</label>
+                                    <input type="text" id="footerFormQuestion" name="footerFormQuestion" class="form__input" placeholder="Напишіть ваше питання">
+                                </div>
                             </div>
-                        </div>
-                        
-                        <div class="form__row">
-                            <div class="form__group">
-                                <label for="footerFormMessage" class="form__label">Питання</label>
-                                <input type="text" id="footerFormMessage" name="footerFormMessage" class="form__input" placeholder="Напишіть ваше питання">
+
+                            <div class="form__actions">
+                                <button id="footerFormSubmit" class="form__button button">Відправити</button>
+                                <div id="footerFormError" class="form__error hide">Sorry, something went wrong!</div>
+                            </div>
+
+                            <div id="footerFormLoader" class="form__loader">
+                                <div></div>
                             </div>
                         </div>
 
-                        <a href="#" target="_blank" class="form__button button">Відправити</a>
-                    </form>
+                        <div id="footerFormSuccess" class="form__success hide">Thank you! <br>We will contact you shortly</div>
+                    </div>
                 </div>
 
                 <div class="footer__contacts">

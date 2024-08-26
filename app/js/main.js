@@ -119,3 +119,55 @@ var swiperGallery2 = new Swiper('.gallery__carousel_2', {
     },
   }
 });
+
+$(document).ready(function() {
+  $('.form .form__input').bind('input', function() {
+    $(this).removeClass('error');
+  })
+
+  $('#footerFormSubmit').click(function() {
+    $("#footerFormError").addClass('hide');
+
+    let fieldsList = $('.footer .form .form__input');
+    let hasEmptyField = false;
+
+    for (let i = 0; i < fieldsList.length; i++) {
+      if (!$(fieldsList[i]).val()) {
+        $(fieldsList[i]).addClass('error');
+        hasEmptyField = true;
+      }
+    }
+
+    if (hasEmptyField) {
+      return;
+    }
+
+    $.ajax({
+      url: "/send.php",
+      type: "post",
+      data: {
+        "name":    $('#footerFormName').val(),
+        "email":   $('#footerFormEmail').val(),
+        "question":   $('#footerFormQuestion').val(),
+      },
+      beforeSend: function() {
+        $("#footerFormLoader").addClass('show');
+      },
+      error: function() {
+        $("#footerFormLoader").removeClass('show');
+        $("#footerFormError").removeClass('hide');
+      },
+      success: function() {
+        $("#footerFormError").addClass('hide');
+        $("#footerFormLoader").removeClass('show');
+        $("#footerFormContent").addClass('hide');
+        $("#footerFormSuccess").removeClass('hide');
+
+        setTimeout(() => {
+          $("#footerFormContent").removeClass('hide');
+          $("#footerFormSuccess").addClass('hide');
+        }, 5000);
+      }
+    });
+  });
+});

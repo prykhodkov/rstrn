@@ -125,6 +125,10 @@ body {
   }
 }
 
+.hide {
+  display: none;
+}
+
 .text-italic {
   font-style: italic;
 }
@@ -2082,6 +2086,7 @@ body {
 
     @media only screen and (max-width: 767px) {
       max-width: 100%;
+      margin-right: 0;
       margin-bottom: 105px;
     }
   }
@@ -2093,6 +2098,17 @@ body {
   }
 
   .form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 218px;
+    width: 100%;
+
+    &__content {
+      width: 100%;
+    }
+
     &__row {
       width: 100%;
       margin-bottom: 20px;
@@ -2137,6 +2153,10 @@ body {
         line-height: 1;
         color: rgba(255, 255, 255, 0.6);
       }
+
+      &.error {
+        border-color: #af2525;
+      }
     }
 
     &__button {
@@ -2146,6 +2166,49 @@ body {
       font-size: 1.25rem;
       letter-spacing: 0.4px;
       color: #ad4419;
+    }
+
+    &__success {
+      width: 100%;
+      font-size: 1.5rem;
+      letter-spacing: 0.48px;
+    }
+
+    &__error {
+      width: 100%;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    &__loader {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      background: rgba(173, 68, 25, 0.7);
+
+      &.show {
+        display: flex;
+      }
+
+      div {
+        height: 70px;
+        width: 70px;
+        border: 3px solid;
+        border-color: transparent #fff #fff;
+        border-radius: 50%;
+        animation: spin 690ms infinite linear;
+
+        @keyframes spin {
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
     }
   }
 
@@ -2162,6 +2225,12 @@ body {
     }
 
     &-main {
+      margin-bottom: 95px;
+
+      @media only screen and (max-width: 767px) {
+        margin-bottom: 0;
+      }
+
       .link {
         display: block;
         margin-bottom: 6px;
