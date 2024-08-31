@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-20RKWR9WNX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-20RKWR9WNX');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
@@ -14,16 +24,6 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link href="dist/css/style.css" rel="stylesheet" type="text/css">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-20RKWR9WNX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-20RKWR9WNX');
-    </script>
 </head>
 
 <body>
@@ -36,9 +36,10 @@
 
                     <nav class="top__header-nav">
                         <a href="#auditory" class="top__header-link anchor-link">для кого</a>
-                        <a href="#program" class="top__header-link anchor-link">програма</a>
-                        <a href="#team" class="top__header-link anchor-link">команда</a>
-                        <a href="#registration" class="top__header-link anchor-link">реестація</a>
+                        <a href="#program" class="top__header-link anchor-link">про курс</a>
+                        <a href="#team" class="top__header-link anchor-link">про оксану</a>
+                        <a href="#speakers" class="top__header-link anchor-link">спікери</a>
+                        <a href="#registration" class="top__header-link anchor-link">тарифи</a>
                     </nav>
 
                     <a href="#top" class="top__header-logo anchor-link"><img src="dist/img/logo.svg" alt="" width="100%"></a>
@@ -57,25 +58,24 @@
                     <div class="mobile-nav__body">
                         <nav class="mobile-nav__nav">
                             <a href="#auditory" class="mobile-nav__link anchor-link">для кого</a>
-                            <a href="#program" class="mobile-nav__link anchor-link">програма</a>
-                            <a href="#team" class="mobile-nav__link anchor-link">команда</a>
-                            <a href="#registration" class="mobile-nav__link anchor-link">реестація</a>
+                            <a href="#program" class="mobile-nav__link anchor-link">про курс</a>
+                            <a href="#team" class="mobile-nav__link anchor-link">про оксану</a>
+                            <a href="#speakers" class="mobile-nav__link anchor-link">спікери</a>
+                            <a href="#registration" class="mobile-nav__link anchor-link">тарифи</a>
                         </nav>
                     </div>
                 </div>
             </div>
         </header>
 
-        <div class="top__content">
-            <div class="container">
-                <div class="top__content-grid">
-                    <div class="top__content-wrapper">
-                        <h2 class="top__content-subheader">Практичний курс з відкриття власного закладу</h2>
-                        <h1 class="top__content-header">одного дня я відкрию свій маленький ресторан</h1>
+        <div class="top__content container">
+            <div class="top__content-secondary">Старт курсу – 1 жовтня</div>
 
-                        <a href="#registration" class="top__content-button button anchor-link">реєстрація</a>
-                    </div>
-                </div>
+            <div class="top__content-main">
+                <h2 class="top__content-subheader">Практичний курс з відкриття власного закладу</h2>
+                <h1 class="top__content-header">одного дня я відкрию свій маленький ресторан</h1>
+
+                <a href="#registration" class="top__content-button button anchor-link">реєстрація</a>
             </div>
         </div>
     </section>
@@ -234,7 +234,7 @@
     <section id="program" class="program">
         <div class="container">
             <div class="program__grid">
-                <h3 class="program__title section-title">Програма курсу</h3>
+                <h3 class="program__title section-title">Про курс</h3>
                 <div class="program__caption">Під час курсу ми навчимося</div>
 
                 <div class="program__list">
@@ -297,7 +297,7 @@
 
     <section id="team" class="team">
         <div class="container">
-            <h3 class="team__title section-title">Команда</h3>
+            <h3 class="team__title section-title">Про Оксану</h3>
 
             <div class="team__grid">
                 <div class="team__info">
@@ -375,7 +375,7 @@
         </div>
     </section>
 
-    <section class="speakers">
+    <section id="speakers" class="speakers">
         <div class="container">
             <h3 class="speakers__title section-title">Наші спікери:</h3>
 
@@ -469,121 +469,18 @@
 
     <section id="registration" class="registration">
         <div class="container">
-            <h3 class="registration__title section-title">Реєстрація</h3>
+            <h3 class="registration__title section-title">Тарифи</h3>
+
+            <div class="registration__hot">
+                <div class="text"><span class="text-italic text-bold">Зареєструватися</span> на курс за ціною <span class="text-lg text-bold">EARLY BIRDS</span> <br>(до 14.09.2024)</div>
+<!--                <div class="icon"><img src="dist/img/flower_1.svg" alt="" width="100%"></div>-->
+            </div>
 
             <div class="registration__grid">
-                <div class="registration__card registration__card_1">
-                    <div class="registration__card-head">
-                        <div class="registration__card-title">ПРЕМІУМ</div>
-                        <div class="registration__card-price">550 Euro</div>
-                    </div>
-
-                    <div class="registration__card-body">
-                        <div class="registration__card-module module">
-                            <div class="module__head">
-                                <div class="module__title">
-                                    <div class="icon"><img src="dist/img/flower_8.svg" alt="" width="100%"></div>
-                                    <div class="title">Концепція</div>
-                                </div>
-    
-                                <div class="module__caption">модуль 1</div>
-                            </div>
-                            
-                            <div class="module__body">
-                                <ul class="module__list">
-                                    <li>Від “не ідеї” закладу до <span class="text-italic text-bold">цілісного концепту</span></li>
-                                    <li>Перетворення концепту в <span class="text-italic text-bold">продукт</span></li>
-                                    <li><span class="text-italic text-bold">Неймінг</span>: гра слів та метафоричне мислення</li>
-                                    <li><span class="text-italic text-bold">Графічний дизайн та дизайн приміщення</span>: як правильно вибрати локацію</li>
-                                    <li><span class="text-italic text-bold">Маркетинг-аналіз</span> ринку</li>
-                                    <li><span class="text-italic text-bold">Storytelling</span> закладу та приклади Love Marks</li>
-                                    <li><span class="text-italic text-bold">Тренди</span> на ринку та оцінка концепції в рамках країни та міста</li>
-                                </ul>
-                            </div>
-                        </div>
-    
-                        <div class="registration__card-module module">
-                            <div class="module__head">
-                                <div class="module__title">
-                                    <div class="icon"><img src="dist/img/flower_8.svg" alt="" width="100%"></div>
-                                    <div class="title">Фінансове планування</div>
-                                </div>
-    
-                                <div class="module__caption">модуль 2</div>
-                            </div>
-                            
-                            <div class="module__body">
-                                <ul class="module__list">
-                                    <li><span class="text-italic text-bold">Система фінансів у закладі</span>: складові частини та взаємозв'язки</li>
-                                    <li><span class="text-italic text-bold">Фінансове</span> планування та <span class="text-italic text-bold">бюджет</span></li>
-                                    <li><span class="text-italic text-bold">Інвестиції</span>: де шукати і як керувати</li>
-                                    <li><span class="text-italic text-bold">Бухгалтерія закладу</span>: структура, інструменти, програма обліку</li>
-                                    <li><span class="text-italic text-bold">Бізнес-партнерство</span>: case study від <span class="text-italic text-bold">Євгенія Білоусова</span> (Київ-Лісабон)</li>
-                                </ul>
-                            </div>
-                        </div>
-    
-                        <div class="registration__card-module module">
-                            <div class="module__head">
-                                <div class="module__title">
-                                    <div class="icon"><img src="dist/img/flower_8.svg" alt="" width="100%"></div>
-                                    <div class="title">Маркетингова стратегія</div>
-                                </div>
-    
-                                <div class="module__caption">модуль 3</div>
-                            </div>
-                            
-                            <div class="module__body">
-                                <ul class="module__list">
-                                    <li><span class="text-italic text-bold">Цільова</span> та персонаж закладу: RoadMap гостя</li>
-                                    <li><span class="text-italic text-bold">Продукт</span> VS <span class="text-italic text-bold">маркетинг</span>: на чиєму ви боці?</li>
-                                    <li><span class="text-italic text-bold">Соціальна відповідальність</span> бізнесу + <span class="text-italic text-bold">інфлюенс</span> стратегія</li>
-                                    <li><span class="text-italic text-bold">Комунікації</span> “під запуск” закладу</li>
-                                    <li><span class="text-italic text-bold">Шлях</span> гостя у закладі та <span class="text-italic text-bold">обмежені бюджети</span>: як працювати з маркетингом “на мінімалках”</li>
-                                    <li><span class="text-italic text-bold">Їжа як experience</span>: кейс стаді від <span class="text-italic text-bold">Аліни Прокопенко</span> (Київ-Париж)</li>
-                                </ul>
-                            </div>
-                        </div>
-    
-                        <div class="registration__card-module module">
-                            <div class="module__head">
-                                <div class="module__title">
-                                    <div class="icon"><img src="dist/img/flower_8.svg" alt="" width="100%"></div>
-                                    <div class="title">Операційка</div>
-                                </div>
-    
-                                <div class="module__caption">модуль 4</div>
-                            </div>
-                            
-                            <div class="module__body">
-                                <ul class="module__list">
-                                    <li><span class="text-italic text-bold">Операційка</span>: складові та зв'язки</li>
-                                    <li><span class="text-italic text-bold">Операційні</span> фінанси закладу. Звітності.</li>
-                                    <li>Секрети <span class="text-italic text-bold">успішної</span> “операційки”</li>
-                                    <li><span class="text-italic text-bold">Команда</span>: як шукати і мотивувати</li>
-                                    <li><span class="text-italic text-bold">Лідерство</span> VS <span class="text-italic text-bold">Management</span>: хто ви і кого вам треба в партнери?</li>
-                                    <li><span class="text-italic text-bold">Технологічні картки</span> та робота з шеф-кухарем</li>
-                                    <li><span class="text-italic text-bold">Логістика</span> та робота з постачальникам</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="registration__card-footer">
-                        <div class="registration__card-plus">+</div>
-                        <div class="registration__card-additional">
-                            <p>2 ZOOM коли та груповий розбір вашого ресторанного кейсу</p>
-                            <p>2 години приватної консультації <br>з Оксаною Романюк</p>
-                        </div>
-
-                        <a href="https://secure.wayforpay.com/button/b4d2f1ced460c" target="_blank" class="registration__card-button button">реєстрація</a>
-                    </div>
-                </div>
-
                 <div class="registration__card registration__card_2">
                     <div class="registration__card-head">
                         <div class="registration__card-title">БАЗА</div>
-                        <div class="registration__card-price">350 Euro</div>
+                        <div class="registration__card-subtitle">Тариф</div>
                     </div>
 
                     <div class="registration__card-body">
@@ -681,10 +578,122 @@
                         <div class="registration__card-plus">+</div>
                         <div class="registration__card-additional">
                             <p>2 ZOOM коли та груповий розбір вашого ресторанного кейсу</p>
-                            <p>2 години приватної консультації <br>з Оксаною Романюк</p>
+                            <p>1 година приватної консультації <br>з Оксаною Романюк</p>
                         </div>
 
-                        <a href="https://secure.wayforpay.com/button/b9f33e0d08ffe" target="_blank" class="registration__card-button button">реєстрація</a>
+                        <div class="registration__card-price">придбати за <span class="text-bold">280 Euro</span> <span class="text-crossed">350 Euro</span></div>
+
+                        <a href="https://secure.wayforpay.com/button/b9f33e0d08ffe" target="_blank" class="registration__card-button button">оплатити</a>
+                    </div>
+                </div>
+
+                <div class="registration__card registration__card_1">
+                    <div class="registration__card-head">
+                        <div class="registration__card-title">ПРЕМІУМ</div>
+                        <div class="registration__card-subtitle">Тариф</div>
+                    </div>
+
+                    <div class="registration__card-body">
+                        <div class="registration__card-module module">
+                            <div class="module__head">
+                                <div class="module__title">
+                                    <div class="icon"><img src="dist/img/flower_8.svg" alt="" width="100%"></div>
+                                    <div class="title">Концепція</div>
+                                </div>
+
+                                <div class="module__caption">модуль 1</div>
+                            </div>
+
+                            <div class="module__body">
+                                <ul class="module__list">
+                                    <li>Від “не ідеї” закладу до <span class="text-italic text-bold">цілісного концепту</span></li>
+                                    <li>Перетворення концепту в <span class="text-italic text-bold">продукт</span></li>
+                                    <li><span class="text-italic text-bold">Неймінг</span>: гра слів та метафоричне мислення</li>
+                                    <li><span class="text-italic text-bold">Графічний дизайн та дизайн приміщення</span>: як правильно вибрати локацію</li>
+                                    <li><span class="text-italic text-bold">Маркетинг-аналіз</span> ринку</li>
+                                    <li><span class="text-italic text-bold">Storytelling</span> закладу та приклади Love Marks</li>
+                                    <li><span class="text-italic text-bold">Тренди</span> на ринку та оцінка концепції в рамках країни та міста</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="registration__card-module module">
+                            <div class="module__head">
+                                <div class="module__title">
+                                    <div class="icon"><img src="dist/img/flower_8.svg" alt="" width="100%"></div>
+                                    <div class="title">Фінансове планування</div>
+                                </div>
+
+                                <div class="module__caption">модуль 2</div>
+                            </div>
+
+                            <div class="module__body">
+                                <ul class="module__list">
+                                    <li><span class="text-italic text-bold">Система фінансів у закладі</span>: складові частини та взаємозв'язки</li>
+                                    <li><span class="text-italic text-bold">Фінансове</span> планування та <span class="text-italic text-bold">бюджет</span></li>
+                                    <li><span class="text-italic text-bold">Інвестиції</span>: де шукати і як керувати</li>
+                                    <li><span class="text-italic text-bold">Бухгалтерія закладу</span>: структура, інструменти, програма обліку</li>
+                                    <li><span class="text-italic text-bold">Бізнес-партнерство</span>: case study від <span class="text-italic text-bold">Євгенія Білоусова</span> (Київ-Лісабон)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="registration__card-module module">
+                            <div class="module__head">
+                                <div class="module__title">
+                                    <div class="icon"><img src="dist/img/flower_8.svg" alt="" width="100%"></div>
+                                    <div class="title">Маркетингова стратегія</div>
+                                </div>
+
+                                <div class="module__caption">модуль 3</div>
+                            </div>
+
+                            <div class="module__body">
+                                <ul class="module__list">
+                                    <li><span class="text-italic text-bold">Цільова</span> та персонаж закладу: RoadMap гостя</li>
+                                    <li><span class="text-italic text-bold">Продукт</span> VS <span class="text-italic text-bold">маркетинг</span>: на чиєму ви боці?</li>
+                                    <li><span class="text-italic text-bold">Соціальна відповідальність</span> бізнесу + <span class="text-italic text-bold">інфлюенс</span> стратегія</li>
+                                    <li><span class="text-italic text-bold">Комунікації</span> “під запуск” закладу</li>
+                                    <li><span class="text-italic text-bold">Шлях</span> гостя у закладі та <span class="text-italic text-bold">обмежені бюджети</span>: як працювати з маркетингом “на мінімалках”</li>
+                                    <li><span class="text-italic text-bold">Їжа як experience</span>: кейс стаді від <span class="text-italic text-bold">Аліни Прокопенко</span> (Київ-Париж)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="registration__card-module module">
+                            <div class="module__head">
+                                <div class="module__title">
+                                    <div class="icon"><img src="dist/img/flower_8.svg" alt="" width="100%"></div>
+                                    <div class="title">Операційка</div>
+                                </div>
+
+                                <div class="module__caption">модуль 4</div>
+                            </div>
+
+                            <div class="module__body">
+                                <ul class="module__list">
+                                    <li><span class="text-italic text-bold">Операційка</span>: складові та зв'язки</li>
+                                    <li><span class="text-italic text-bold">Операційні</span> фінанси закладу. Звітності.</li>
+                                    <li>Секрети <span class="text-italic text-bold">успішної</span> “операційки”</li>
+                                    <li><span class="text-italic text-bold">Команда</span>: як шукати і мотивувати</li>
+                                    <li><span class="text-italic text-bold">Лідерство</span> VS <span class="text-italic text-bold">Management</span>: хто ви і кого вам треба в партнери?</li>
+                                    <li><span class="text-italic text-bold">Технологічні картки</span> та робота з шеф-кухарем</li>
+                                    <li><span class="text-italic text-bold">Логістика</span> та робота з постачальникам</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="registration__card-footer">
+                        <div class="registration__card-plus">+</div>
+                        <div class="registration__card-additional">
+                            <p>2 ZOOM коли та груповий розбір вашого ресторанного кейсу</p>
+                            <p>1 година приватної консультації <br>з Оксаною Романюк</p>
+                        </div>
+
+                        <div class="registration__card-price">придбати за <span class="text-bold">420 Euro</span> <span class="text-crossed">550 Euro</span></div>
+
+                        <a href="https://secure.wayforpay.com/button/b4d2f1ced460c" target="_blank" class="registration__card-button button">оплатити</a>
                     </div>
                 </div>
 
@@ -695,24 +704,7 @@
                 <div class="registration__flower registration__flower_5" data-parallaxify-range-x="25" data-parallaxify-range-y="25"><img src="dist/img/flower_9.svg" alt="" width="100%"></div>
                 <div class="registration__flower registration__flower_6" data-parallaxify-range-x="-25" data-parallaxify-range-y="-25"><img src="dist/img/flower_2.svg" alt="" width="100%"></div>
                 <div class="registration__flower registration__flower_7" data-parallaxify-range-x="25" data-parallaxify-range-y="25"><img src="dist/img/flower_4.svg" alt="" width="100%"></div>
-            </div>
-
-            <div class="registration__hot">
-                <div class="registration__hot-info">
-                    <div class="text"><span class="text-italic text-bold">Зареєструватися</span> на курс за ціною <span class="text-lg text-bold">EARLY BIRDS</span> <br>(до 01.10.2024)</div>
-                    <div class="icon"><img src="dist/img/flower_1.svg" alt="" width="100%"></div>
-                </div>
-
-                <div class="registration__hot-buttons">
-                    <a href="https://secure.wayforpay.com/button/b7e69d44c93e4" target="_blank" class="registration__hot-button registration__hot-button_1">
-                        <div class="text text_1">преміум <span class="text-bold">420 EUR0</span></div>
-                        <div class="text text_2"><span class="text-bold">Придбати</span></div>
-                    </a>
-                    <a href="https://secure.wayforpay.com/button/bf6fe24f806f1" target="_blank" class="registration__hot-button registration__hot-button_2">
-                        <div class="text text_1">база <span class="text-bold">280 EUR0</span></div>
-                        <div class="text text_2"><span class="text-bold">Придбати</span></div>
-                    </a>
-                </div>
+                <div class="registration__flower registration__flower_8" data-parallaxify-range-x="25" data-parallaxify-range-y="25"><img src="dist/img/flower_14.svg" alt="" width="100%"></div>
             </div>
         </div>
     </section>
@@ -751,7 +743,7 @@
 
                             <div class="form__actions">
                                 <button id="footerFormSubmit" class="form__button button">Відправити</button>
-                                <div id="footerFormError" class="form__error hide">Sorry, something went wrong!</div>
+                                <div id="footerFormError" class="form__error hide">Oops, щось пішло не так!</div>
                             </div>
 
                             <div id="footerFormLoader" class="form__loader">
@@ -759,7 +751,7 @@
                             </div>
                         </div>
 
-                        <div id="footerFormSuccess" class="form__success hide">Thank you! <br>We will contact you shortly</div>
+                        <div id="footerFormSuccess" class="form__success hide">Дякуємо! <br>Ми звʼяжемося з вами найближчим часом.</div>
                     </div>
                 </div>
 
@@ -787,10 +779,6 @@
                             <span class="label">Instagram: </span>
                             <a href="https://www.instagram.com/rstrn.concepts?igsh=M2pqc3JkdHVqcGs5" target="_blank" class="link">@rstrn.concepts</a>
                         </div>
-                        <div class="footer__contacts-item">
-                            <span class="label">Instagram: </span>
-                            <a href="https://www.instagram.com/romaniukok?igsh=aDU3aG1hYW1zMWk1" target="_blank" class="link">@romaniuk</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -806,6 +794,15 @@
             </div>
         </div>
     </footer>
+
+    <a href="#registration" class="fixed-button anchor-link">
+        <div class="fixed-button__image">
+            <svg width="100%" viewBox="0 0 231 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M230.33 38.5957C232.328 32.969 230.074 20.2411 220.595 19.4553C212.442 18.7793 203.388 18.8213 196.886 23.1234C197.008 22.5727 197.128 22.0361 197.249 21.5237C201.832 2.02203 210.424 4.31609 207.751 1.44851C205.078 -1.4198 195.722 0.301485 191.712 3.74257C187.701 7.1844 184.647 7.37532 175.099 4.69868C165.552 2.02203 161.733 7.75791 149.895 13.4326C138.056 19.1073 141.124 5.84202 125.263 6.80402C116.996 7.30529 115.45 15.232 104.128 15.232C92.8058 15.232 91.1228 7.13869 82.9923 6.80402C67.1162 6.15163 70.1994 19.1073 58.3606 13.4326C46.5226 7.75718 42.7032 2.02129 33.1562 4.69794C23.6092 7.37459 20.554 7.18366 16.5439 3.74184C12.5346 0.300748 3.1783 -1.4198 0.505174 1.44778C-2.16796 4.31535 6.42419 2.02129 11.007 21.523C15.5898 41.0247 20.7454 89.2058 41.7491 102.59C62.7528 115.974 62.9435 113.87 62.7528 115.974C62.5621 118.078 59.3162 121.327 66.3808 122.857C68.7565 123.371 78.1128 124.361 89.9862 125.171C89.9862 125.171 99.4559 126.18 104.128 125.972C108.8 126.181 118.269 125.171 118.269 125.171C130.143 124.361 139.499 123.371 141.875 122.857C148.939 121.327 145.693 118.077 145.503 115.974C145.312 113.871 145.503 115.974 166.506 102.59C170.455 100.074 173.843 96.3283 176.772 91.7756C179.414 90.5497 182.988 89.6526 187.469 90.2099C198.13 91.5353 218.868 84.0147 218.368 72.7884L217.869 61.5621C217.869 61.5621 220.916 65.3364 224.59 62.8028C228.264 60.2691 231.8 52.6786 228.889 51.0701C225.977 49.4623 225.512 51.4106 224.426 53.244C223.34 55.078 217.416 54.7338 218.703 51.2241C219.991 47.7145 228.332 44.2225 230.33 38.5957ZM212.159 46.6972C209.92 47.2471 202.509 47.9135 204.664 52.8076C206.819 57.7016 213.685 57.577 212.396 65.1551C211.108 72.7331 206.122 85.3018 194.548 83.7007C189.18 82.9584 184.608 83.3336 180.954 84.1378C187.501 70.2327 191.227 52.2274 193.987 37.8402C198.297 34.06 205.09 28.5696 211.538 31.4873C219.927 35.2844 214.399 46.1473 212.159 46.6972Z" fill="#AD4419"/>
+            </svg>
+        </div>
+        <div class="fixed-button__text">Реєстрація <br>на курс</div>
+    </a>
 </main>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

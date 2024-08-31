@@ -48,18 +48,21 @@ body {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 25px;
+  padding-left: 25px;
+  padding-right: 25px;
 
   @media only screen and (max-width: 1200px) {
     max-width: 1000px;
   }
 
   @media only screen and (max-width: 991px) {
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   @media only screen and (max-width: 767px) {
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -95,6 +98,59 @@ body {
     color: #e0e1dc !important;
     background: #224486;
     border-color: #224486;
+  }
+}
+
+.fixed-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 20;
+
+  @media only screen and (max-width: 767px) {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  &:hover {
+    .fixed-button__image svg path {
+      fill: #fff;
+    }
+
+    .fixed-button__text {
+      color: #224486;
+    }
+  }
+
+  &__image {
+    width: 230px;
+
+    @media only screen and (max-width: 767px) {
+      width: 150px;
+    }
+
+    svg path {
+      transition: 180ms ease;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 18%;
+    transform: translateY(-50%);
+    width: 125px;
+    font-weight: 500;
+    font-size: 1.25rem;
+    transition: 180ms ease;
+
+    @media only screen and (max-width: 767px) {
+      left: 15%;
+      width: 90px;
+      font-size: 1rem;
+    }
   }
 }
 
@@ -143,6 +199,10 @@ body {
 
 .text-disabled {
   color: rgba(224, 225, 220, 0.20);
+}
+
+.text-crossed {
+  text-decoration: line-through;
 }
 
 .mt {
@@ -265,10 +325,10 @@ body {
   width: 100%;
   background: url("../img/top-bg.jpg") no-repeat center center;
   background-size: cover;
+  z-index: 30;
 
   &__header {
     width: 100%;
-    transition: 180ms ease;
 
     &.scrolled {
       position: fixed;
@@ -276,6 +336,10 @@ body {
       left: 0;
       transform: translateY(-100px);
       z-index: -1;
+    }
+
+    &.transition {
+      transition: 180ms ease;
     }
 
     &.fixed {
@@ -289,15 +353,7 @@ body {
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      padding: 46px 0;
-
-      @media only screen and (max-width: 991px) {
-        padding: 36px 0;
-      }
-
-      @media only screen and (max-width: 767px) {
-        padding: 45px 0;
-      }
+      padding: 36px 0;
     }
 
     &-burger {
@@ -383,7 +439,7 @@ body {
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      padding: 45px 0;
+      padding: 36px 0;
     }
 
     &__burger {
@@ -400,7 +456,7 @@ body {
     &__body {
       width: 100%;
       margin-top: auto;
-      padding-bottom: 100px;
+      padding-bottom: 80px;
     }
 
     &__nav {
@@ -424,17 +480,36 @@ body {
   }
 
   &__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
-    margin-top: auto;
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
 
     @media only screen and (max-width: 991px) {
-      padding: 80px 0;
+      padding-top: 80px;
+      padding-bottom: 80px;
     }
 
-    &-grid {
+    @media only screen and (max-width: 767px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    &-secondary {
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.48px;
+    }
+
+    &-main {
       width: 100%;
       max-width: 740px;
+      margin-top: auto;
     }
 
     &-subheader {
@@ -1641,7 +1716,7 @@ body {
   position: relative;
   overflow: hidden;
   padding-top: 120px;
-  padding-bottom: 100px;
+  padding-bottom: 160px;
   text-align: center;
   color: #224486;
   background: #e0e1dc;
@@ -1652,10 +1727,9 @@ body {
   }
 
   &__title {
-    margin-bottom: 105px;
+    margin-bottom: 40px;
 
     @media only screen and (max-width: 767px) {
-      margin-bottom: 95px;
       font-size: 2.875rem;
     }
   }
@@ -1665,7 +1739,6 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 36px;
-    margin-bottom: 110px;
 
     @media only screen and (max-width: 991px) {
       grid-column-gap: 20px;
@@ -1674,7 +1747,6 @@ body {
     @media only screen and (max-width: 767px) {
       grid-template-columns: 1fr;
       grid-row-gap: 60px;
-      margin-bottom: 40px;
     }
   }
 
@@ -1736,7 +1808,7 @@ body {
       text-transform: uppercase;
     }
 
-    &-price {
+    &-subtitle {
       font-size: 1.5rem;
       font-style: italic;
       letter-spacing: 0.48px;
@@ -1767,7 +1839,7 @@ body {
     &-additional {
       width: 100%;
       max-width: 320px;
-      margin: 0 auto 40px;
+      margin: 0 auto 25px;
       font-size: 1.125rem;
       font-weight: 600;
       letter-spacing: 0.36px;
@@ -1779,6 +1851,31 @@ body {
         &:last-child {
           margin-bottom: 0;
         }
+      }
+    }
+
+    &-price {
+      position: relative;
+      margin-bottom: 40px;
+      padding-top: 22px;
+      font-size: 1.5rem;
+      font-style: italic;
+      letter-spacing: 0.48px;
+      text-transform: uppercase;
+
+      @media only screen and (max-width: 767px) {
+        font-size: 1.25rem;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 1px;
+        width: 200px;
+        background: #e0e1dc;
       }
     }
 
@@ -1868,32 +1965,29 @@ body {
   }
 
   &__hot {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 65px;
     text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.48px;
 
-    &-info {
-      position: relative;
-      display: inline-block;
-      margin-bottom: 40px;
-      font-size: 1.5rem;
-      letter-spacing: 0.48px;
+    @media only screen and (max-width: 767px) {
+      text-align: left;
+    }
+
+    .icon {
+      position: absolute;
+      top: -26px;
+      right: -63px;
+      width: 75px;
+      transform: rotate(22deg);
 
       @media only screen and (max-width: 767px) {
-        text-align: left;
-      }
-
-      .icon {
-        position: absolute;
-        top: -26px;
-        right: -63px;
-        width: 75px;
-        transform: rotate(22deg);
-
-        @media only screen and (max-width: 767px) {
-          top: 42px;
-          right: 2px;
-          width: 87px;
-          transform: rotate(-23deg);
-        }
+        top: 42px;
+        right: 2px;
+        width: 87px;
+        transform: rotate(-23deg);
       }
     }
 
@@ -2012,6 +2106,12 @@ body {
       right: -126px;
       width: 79px;
     }
+
+    &_8 {
+      bottom: -100px;
+      right: -120px;
+      width: 93px;
+    }
   }
 }
 //registration
@@ -2041,11 +2141,13 @@ body {
 
 //footer
 .footer {
+  position: relative;
   padding-top: 45px;
   padding-bottom: 40px;
   color: #e0e1dc;
   background: url("../img/footer-bg.jpg") repeat 370px 30px;
   background-size: 1440px auto;
+  z-index: 30;
 
   @media only screen and (max-width: 767px) {
     padding-top: 80px;

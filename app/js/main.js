@@ -67,8 +67,16 @@ $(window).on('scroll', () => {
 
   if (window.scrollY > $(header).height()) {
     $(header).addClass('scrolled');
+    $('#top').css('paddingTop', $(header).height());
   } else {
     $(header).removeClass('scrolled');
+    $('#top').css('paddingTop', 0);
+  }
+
+  if (window.scrollY > $(header).height() + 100) {
+    $(header).addClass('transition');
+  } else {
+    $(header).removeClass('transition');
   }
 });
 
