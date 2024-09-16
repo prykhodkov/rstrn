@@ -1887,6 +1887,13 @@ body {
         background: transparent;
         border-color: #e0e1dc;
       }
+
+      &.disabled {
+        color: #e0e1dc;
+        background: transparent;
+        border-color: #e0e1dc;
+        cursor: default;
+      }
     }
 
     .module {
