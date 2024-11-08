@@ -128,6 +128,43 @@ var swiperGallery2 = new Swiper('.gallery__carousel_2', {
   }
 });
 
+var feedbackCarousel = new Swiper('.feedback__carousel', {
+  loop: true,
+  centeredSlides: true,
+  slidesPerView: 1.19,
+  spaceBetween: 20,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.feedback .swiper-button-next',
+    prevEl: '.feedback .swiper-button-prev',
+  },
+  breakpoints: {
+    992: {
+      centeredSlides: false,
+      slidesPerView: 4.01,
+      spaceBetween: -10,
+    },
+    768: {
+      centeredSlides: false,
+      slidesPerView: 3.01,
+      spaceBetween: -10,
+    },
+    601: {
+      centeredSlides: false,
+      slidesPerView: 2.01,
+      spaceBetween: -10,
+    },
+    451: {
+      centeredSlides: true,
+      slidesPerView: 1.14,
+      spaceBetween: 20,
+    },
+  }
+});
+
 $(document).ready(function() {
   $('.form .form__input').bind('input', function() {
     $(this).removeClass('error');
