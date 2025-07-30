@@ -86,6 +86,30 @@ $('.collapse__head').on('click', function() {
   $(this).next('.collapse__body').slideToggle();
 });
 
+var warningCarousel = new Swiper('.warning__carousel', {
+  loop: true,
+  allowTouchMove: false,
+  centeredSlides: false,
+  preventInteractionOnTransition: true,
+  slidesPerView: 1,
+  freeMode: true,
+  autoplay: {
+    enabled: true,
+    delay: 0,
+    pauseOnMouseEnter: false,
+    disableOnInteraction: false,
+  },
+  speed: 5000,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1200: {
+      slidesPerView: 3,
+    },
+  }
+});
+
 var swiperGallery1 = new Swiper('.gallery__carousel_1', {
   loop: true,
   allowTouchMove: false,
@@ -215,4 +239,44 @@ $(document).ready(function() {
       }
     });
   });
+});
+
+const popup = $('#popup');
+const video = $('#popupVideo')[0];
+
+$('.popup-open').on('click', showPopup);
+$('.popup-close').on('click', closePopup);
+
+function showPopup() {
+  popup.addClass('show');
+  $('body').addClass('lock');
+
+  setTimeout(() => {
+    popup.addClass('animate');
+  }, 100)
+}
+
+function closePopup() {
+  popup.removeClass('animate');
+
+  setTimeout(() => {
+    popup.removeClass('show');
+    $('body').removeClass('lock');
+    resetVideo();
+  }, 200)
+}
+
+function resetVideo() {
+  video.pause();
+  video.currentTime = 0;
+}
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    showPopup();
+
+    video.play().catch(err => {
+      console.warn('Автовідтворення заблоковано:', err);
+    });
+  }, 1000);
 });

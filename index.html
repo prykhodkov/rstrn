@@ -75,13 +75,39 @@
         </header>
 
         <div class="top__content container">
-            <div class="top__content-secondary">Старт курсу  — 3 лютого</div>
+            <div class="top__content-secondary">
+                <span class="caption">Старт курсу –</span>
+                <div class="inscription"><img src="dist/img/inscription_1.svg" alt="" width="100%"></div>
+            </div>
+
+            <div class="top__content-inscription"><img src="dist/img/inscription_2.svg" alt="" height="100%"></div>
 
             <div class="top__content-main">
                 <h2 class="top__content-subheader">Практичний курс з відкриття власного закладу</h2>
                 <h1 class="top__content-header">одного дня я відкрию свій маленький ресторан</h1>
 
                 <a href="#registration" class="top__content-button button anchor-link">реєстрація</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="warning">
+        <div class="warning__grid">
+            <div class="warning__carousel swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="warning__item"><span class="text-italic">останній потік</span>😱</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="warning__item"><span class="text-italic">останній потік</span>🤓</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="warning__item"><span class="text-italic">останній потік</span>🤩</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="warning__item"><span class="text-italic">останній потік</span>😱</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -384,6 +410,7 @@
     <section id="speakers" class="speakers">
         <div class="container">
             <h3 class="speakers__title section-title">Наші спікери:</h3>
+            <div class="speakers__inscription-mobile"><img src="dist/img/inscription_3.svg" alt="" width="100%"></div>
 
             <div class="speakers__grid">
                 <div class="speakers__item speakers__item_1">
@@ -469,6 +496,7 @@
                 </div>
 
                 <div class="speakers__image"><img src="dist/img/tableware.svg" alt="" width="100%"></div>
+                <div class="speakers__inscription-desktop"><img src="dist/img/inscription_3.svg" alt="" width="100%"></div>
             </div>
         </div>
     </section>
@@ -711,8 +739,15 @@
             <h3 class="registration__title section-title">Тарифи</h3>
 
             <div class="registration__hot">
-                <div class="text"><span class="text-italic text-bold text-uppercase">новорічний</span> потік-маніфестація <span class="text-italic">RSTRN 2.0.</span></div>
-                <div class="text"><span class="text-italic">Оновлена</span> версія курсу для тих, хто мріє про власний <span class="text-italic">ресторан.</span></div>
+                <div class="registration__hot-paragraph registration__hot-paragraph_1">
+                    <div class="text"><span class="text-italic text-bold text-uppercase">вересневий</span> потік: зараз або ніколи</div>
+                    <div class="image"><img src="dist/img/inscription_5.svg" alt="" width="100%"></div>
+                </div>
+                <div class="registration__hot-paragraph registration__hot-paragraph_2">
+                    <div class="text"><span class="text-italic">Оновлена</span> версія курсу для тих, хто мріє про власний <span class="text-italic">ресторан.</span></div>
+                </div>
+            
+                <div class="registration__inscription"><img src="dist/img/inscription_4.svg" alt="" width="100%"></div>
             </div>
 
             <div class="registration__grid">
@@ -821,7 +856,11 @@
                             <p>1 година приватної консультації <br>з Оксаною Романюк</p>
                         </div>
 
-                        <div class="registration__card-price">придбати за <span class="text-bold">350 Euro</span></div>
+                        <div class="registration__card-price">
+                            <span class="text-italic">придбати за</span>
+                            <div class="price"><span class="text-italic">195 Euro</span>🔥</div>
+                            <span class="text-crossed">350 Euro</span>
+                        </div>
 
                         <a href="https://secure.wayforpay.com/button/b9f33e0d08ffe" target="_blank" class="registration__card-button button">Оплатити</a>
                     </div>
@@ -932,7 +971,11 @@
                             <p>1 година приватної консультації <br>з Оксаною Романюк</p>
                         </div>
 
-                        <div class="registration__card-price">придбати за <span class="text-bold">750 Euro</span></div>
+                        <div class="registration__card-price">
+                            <span class="text-italic">придбати за</span>
+                            <div class="price"><span class="text-italic">490 Euro</span>🔥</div>
+                            <span class="text-crossed">750 Euro</span>
+                        </div>
 
                         <a href="https://secure.wayforpay.com/button/b4d2f1ced460c" target="_blank" class="registration__card-button button">Оплатити</a>
                     </div>
@@ -947,6 +990,8 @@
                 <div class="registration__flower registration__flower_7" data-parallaxify-range-x="25" data-parallaxify-range-y="25"><img src="dist/img/flower_4.svg" alt="" width="100%"></div>
                 <div class="registration__flower registration__flower_8" data-parallaxify-range-x="25" data-parallaxify-range-y="25"><img src="dist/img/flower_14.svg" alt="" width="100%"></div>
             </div>
+
+            <div class="registration__warning"><span class="popup-open">*Останній потік курсу</span></div>
         </div>
     </section>
 
@@ -1039,11 +1084,44 @@
     <a href="#registration" class="fixed-button anchor-link">
         <div class="fixed-button__image">
             <svg width="100%" viewBox="0 0 231 126" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M230.33 38.5957C232.328 32.969 230.074 20.2411 220.595 19.4553C212.442 18.7793 203.388 18.8213 196.886 23.1234C197.008 22.5727 197.128 22.0361 197.249 21.5237C201.832 2.02203 210.424 4.31609 207.751 1.44851C205.078 -1.4198 195.722 0.301485 191.712 3.74257C187.701 7.1844 184.647 7.37532 175.099 4.69868C165.552 2.02203 161.733 7.75791 149.895 13.4326C138.056 19.1073 141.124 5.84202 125.263 6.80402C116.996 7.30529 115.45 15.232 104.128 15.232C92.8058 15.232 91.1228 7.13869 82.9923 6.80402C67.1162 6.15163 70.1994 19.1073 58.3606 13.4326C46.5226 7.75718 42.7032 2.02129 33.1562 4.69794C23.6092 7.37459 20.554 7.18366 16.5439 3.74184C12.5346 0.300748 3.1783 -1.4198 0.505174 1.44778C-2.16796 4.31535 6.42419 2.02129 11.007 21.523C15.5898 41.0247 20.7454 89.2058 41.7491 102.59C62.7528 115.974 62.9435 113.87 62.7528 115.974C62.5621 118.078 59.3162 121.327 66.3808 122.857C68.7565 123.371 78.1128 124.361 89.9862 125.171C89.9862 125.171 99.4559 126.18 104.128 125.972C108.8 126.181 118.269 125.171 118.269 125.171C130.143 124.361 139.499 123.371 141.875 122.857C148.939 121.327 145.693 118.077 145.503 115.974C145.312 113.871 145.503 115.974 166.506 102.59C170.455 100.074 173.843 96.3283 176.772 91.7756C179.414 90.5497 182.988 89.6526 187.469 90.2099C198.13 91.5353 218.868 84.0147 218.368 72.7884L217.869 61.5621C217.869 61.5621 220.916 65.3364 224.59 62.8028C228.264 60.2691 231.8 52.6786 228.889 51.0701C225.977 49.4623 225.512 51.4106 224.426 53.244C223.34 55.078 217.416 54.7338 218.703 51.2241C219.991 47.7145 228.332 44.2225 230.33 38.5957ZM212.159 46.6972C209.92 47.2471 202.509 47.9135 204.664 52.8076C206.819 57.7016 213.685 57.577 212.396 65.1551C211.108 72.7331 206.122 85.3018 194.548 83.7007C189.18 82.9584 184.608 83.3336 180.954 84.1378C187.501 70.2327 191.227 52.2274 193.987 37.8402C198.297 34.06 205.09 28.5696 211.538 31.4873C219.927 35.2844 214.399 46.1473 212.159 46.6972Z" fill="#AD4419"/>
+                <path d="M230.33 38.5957C232.328 32.969 230.074 20.2411 220.595 19.4553C212.442 18.7793 203.388 18.8213 196.886 23.1234C197.008 22.5727 197.128 22.0361 197.249 21.5237C201.832 2.02203 210.424 4.31609 207.751 1.44851C205.078 -1.4198 195.722 0.301485 191.712 3.74257C187.701 7.1844 184.647 7.37532 175.099 4.69868C165.552 2.02203 161.733 7.75791 149.895 13.4326C138.056 19.1073 141.124 5.84202 125.263 6.80402C116.996 7.30529 115.45 15.232 104.128 15.232C92.8058 15.232 91.1228 7.13869 82.9923 6.80402C67.1162 6.15163 70.1994 19.1073 58.3606 13.4326C46.5226 7.75718 42.7032 2.02129 33.1562 4.69794C23.6092 7.37459 20.554 7.18366 16.5439 3.74184C12.5346 0.300748 3.1783 -1.4198 0.505174 1.44778C-2.16796 4.31535 6.42419 2.02129 11.007 21.523C15.5898 41.0247 20.7454 89.2058 41.7491 102.59C62.7528 115.974 62.9435 113.87 62.7528 115.974C62.5621 118.078 59.3162 121.327 66.3808 122.857C68.7565 123.371 78.1128 124.361 89.9862 125.171C89.9862 125.171 99.4559 126.18 104.128 125.972C108.8 126.181 118.269 125.171 118.269 125.171C130.143 124.361 139.499 123.371 141.875 122.857C148.939 121.327 145.693 118.077 145.503 115.974C145.312 113.871 145.503 115.974 166.506 102.59C170.455 100.074 173.843 96.3283 176.772 91.7756C179.414 90.5497 182.988 89.6526 187.469 90.2099C198.13 91.5353 218.868 84.0147 218.368 72.7884L217.869 61.5621C217.869 61.5621 220.916 65.3364 224.59 62.8028C228.264 60.2691 231.8 52.6786 228.889 51.0701C225.977 49.4623 225.512 51.4106 224.426 53.244C223.34 55.078 217.416 54.7338 218.703 51.2241C219.991 47.7145 228.332 44.2225 230.33 38.5957ZM212.159 46.6972C209.92 47.2471 202.509 47.9135 204.664 52.8076C206.819 57.7016 213.685 57.577 212.396 65.1551C211.108 72.7331 206.122 85.3018 194.548 83.7007C189.18 82.9584 184.608 83.3336 180.954 84.1378C187.501 70.2327 191.227 52.2274 193.987 37.8402C198.297 34.06 205.09 28.5696 211.538 31.4873C219.927 35.2844 214.399 46.1473 212.159 46.6972Z" fill="#56FF89"/>
             </svg>
         </div>
         <div class="fixed-button__text">Реєстрація <br>на курс</div>
     </a>
+
+    <div id="popup" class="popup">
+        <div class="popup__backdrop popup-close"></div>
+        <div class="popup__window">
+            <div class="popup__close popup-close">
+                <div class="icon"><img src="dist/img/close.svg" alt="" width="100%"></div>
+            </div>
+            <div class="popup__content">
+                <div class="popup__video">
+                    <video id="popupVideo" controls muted>
+                        <source src="dist/video/reels.webm" type="video/webm">
+                        <source src="dist/video/reels.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="popup__title">ВЕЛИКИЙ ФІНАЛЬНИЙ РОЗПРОДАЖ</div>
+                <div class="popup__subtitle">ОСТАННІЙ набір курсу RSTRN 3.0*</div>
+                <div class="popup__text">
+                    <p>* Я, <span class="text-semibold text-italic">Оксана Романюк</span>, засновниця курсу з ресторанного бізнесу і людина з безліччю професій за плечима раджу вам: <span class="text-semibold text-italic">ЗРОБІТЬ ЦЕ ЗАРАЗ! Адже таких цін не буде більше НІКОЛИ.</span></p>
+                    <p>В моєму житті періоди набуття практичних знань завжди змінюються періодами, коли я хочу цими знаннями ділитися. З вересня 2026 я повертаюся до практики, і тому хочу, щоб цей курс пройшло якомога більше людей, які завжди мріяли про свій ресторан. Але не наважувалися, бо “хто я такий, щоб це робити”. <span class="text-semibold text-italic">Обіцяю вам</span>: ця подорож стане для вас трансформаційною. І навіть якщо ресторан ви потім не відкриєте, ви назавжди зміните своє уявлення про роботу цього бізнесу.</p>
+                    <p>До слова, 2026-й рік, за словами астрологів, найкращий для фундаментального переосмислення своїх цінностей, мрій та професійної діяльності. І я щиро бажаю, щоб ваша робота стала вашим життям. І щоденна рутина надихала, а не змушувала тікати від реальності.</p>
+                    <p>Ваша Оксана Романюк</p>
+                    <p><span class="text-semibold text-italic">P.S. Я не прощаюся назавжди. Навпаки. Йду в практику ще глибше щоб ділитися з вами новими знаннями. Тож, до зустрічі, мої улюблені мрійники!</span></p>
+                </div>
+
+                <div class="popup__image popup__image_3"><img src="dist/img/popup_img_3.svg" alt="" width="100%"></div>
+                <div class="popup__image popup__image_4"><img src="dist/img/popup_img_4.svg" alt="" width="100%"></div>
+            </div>
+
+            <div class="popup__image popup__image_1"><img src="dist/img/popup_img_1.svg" alt="" width="100%"></div>
+            <div class="popup__image popup__image_2"><img src="dist/img/popup_img_2.svg" alt="" width="100%"></div>
+        </div>
+    </div>
 </main>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

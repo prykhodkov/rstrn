@@ -17,6 +17,11 @@ gulp.task('fonts', function() {
       .pipe(gulp.dest('dist/fonts'))
 })
 
+gulp.task('video', function() {
+    return gulp.src('app/video/**/*')
+      .pipe(gulp.dest('dist/video'))
+})
+
 gulp.task('sass', function() {
     return gulp.src('app/scss/*.scss')
       .pipe(sass({
