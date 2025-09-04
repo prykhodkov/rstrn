@@ -531,7 +531,7 @@ body {
         width: 100%;
         max-width: 218px;
         margin-left: 10px;
-        margin-bottom: -8px;
+        // margin-bottom: -8px;
 
         @media only screen and (max-width: 767px) {
           max-width: 163px;
@@ -2508,8 +2508,8 @@ body {
     }
 
     @media only screen and (max-width: 450px) {
-      top: 18px;
-      left: 50vw;
+      top: 21px;
+      left: 51vw;
       max-width: 120px;
     }
   }
